@@ -1,0 +1,149 @@
+generated: '2026-08-26'
+method: probed
+source: https://perfumeo-ai.com/.well-known/
+note: >-
+  ZERO REAL DOCUMENTS. Every path below returned HTTP 200, and every one of them is a
+  SOFT 200 — the body is the same HTML placeholder the host returns for every URL, not a
+  well-known document. perfumeo-ai.com is a parked domain: it answers a JS bot-challenge
+  interstitial (POST /_challenge/complete) and then serves a "Coming Soon" holding page,
+  and it is a wildcard catch-all — an invented path (/this-path-does-not-exist-92847) and
+  an invented subdomain (random-nonexistent-sub.perfumeo-ai.com) both resolve and answer
+  200 with the identical shell. NO WellKnown, APICatalog or SecurityTxt pointer is emitted
+  in apis.yml, and none should ever be added from this probe. A future run that reads only
+  the status codes here will conclude this provider serves nine well-known documents; it
+  serves none. Judge these rows by content_type + body, never by status.
+hosts:
+- host: perfumeo-ai.com
+  parked: true
+  catch_all: true
+  note: >-
+    Wildcard DNS + catch-all HTTP. Domain WHOIS creation date 2026-06-12 (Dynadot,
+    registrant "Super Privacy Service LTD c/o Dynadot", nameservers *.ns.giantpanda.com),
+    i.e. re-registered by a domain-parking service two months before this probe.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    real_document: false
+    file: null
+    note: HTML placeholder shell, not RFC 9116 text. Treated as a miss.
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    real_document: false
+    file: null
+    note: HTML placeholder shell, not JSON. Treated as a miss.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    real_document: false
+    file: null
+    note: HTML placeholder shell, not JSON. Treated as a miss.
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    content_type: text/html
+    real_document: false
+    file: null
+    note: HTML placeholder shell, not JSON. Treated as a miss.
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    real_document: false
+    file: null
+    note: HTML placeholder shell, not an RFC 9727 catalog. Treated as a miss.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    real_document: false
+    file: null
+    note: HTML placeholder shell, not JSON. Treated as a miss.
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    real_document: false
+    file: null
+    note: >-
+      HTML placeholder shell, not an A2A AgentCard. This is the dominant agent-card false
+      positive; no a2a/ artifact and no AgentCard pointer were written.
+  - path: /.well-known/agent.json
+    status: 200
+    content_type: text/html
+    real_document: false
+    file: null
+    note: HTML placeholder shell (legacy pre-0.3 agent-card path). Treated as a miss.
+  - path: /robots.txt
+    status: 200
+    content_type: text/plain
+    real_document: true
+    file: null
+    note: >-
+      The ONLY path that returned a genuine text document (308 bytes). It is the parking
+      service's default robots.txt, not the company's — it allows Googlebot/bingbot/Slurp
+      with a crawl-delay and sets "User-agent: * / Disallow: /". Not a well-known document
+      and not scoreable.
+contract_discovery:
+  note: >-
+    STEP 0b was run in full against this host before concluding no contract exists. Every
+    probe returned the same catch-all placeholder shell.
+  probes:
+  - url: https://perfumeo-ai.com/openapi.json
+    status: 200
+    result: html-shell
+  - url: https://perfumeo-ai.com/openapi.yaml
+    status: 200
+    result: html-shell
+  - url: https://perfumeo-ai.com/swagger.json
+    status: 200
+    result: empty-body
+  - url: https://perfumeo-ai.com/v1/openapi.json
+    status: 200
+    result: html-shell
+  - url: https://perfumeo-ai.com/api-docs
+    status: 200
+    result: empty-body
+  - url: https://perfumeo-ai.com/docs
+    status: 200
+    result: html-shell
+  - url: https://perfumeo-ai.com/redoc
+    status: 200
+    result: html-shell
+  - url: https://perfumeo-ai.com/graphql
+    status: 200
+    result: html-shell
+  - url: https://perfumeo-ai.com/mcp
+    status: 200
+    result: html-shell
+  - url: https://perfumeo-ai.com/llms.txt
+    status: 200
+    result: html-shell
+  - url: https://perfumeo-ai.com/sitemap.xml
+    status: 200
+    result: html-shell
+  subdomains_probed:
+    note: >-
+      All eight resolve via wildcard DNS to the same four IPs as the apex and serve the
+      identical placeholder. None is a real API, docs or status host.
+    hosts:
+    - {host: api.perfumeo-ai.com, status: 200, result: html-shell}
+    - {host: app.perfumeo-ai.com, status: 200, result: html-shell}
+    - {host: docs.perfumeo-ai.com, status: 200, result: html-shell}
+    - {host: developer.perfumeo-ai.com, status: 200, result: html-shell}
+    - {host: dev.perfumeo-ai.com, status: 200, result: html-shell}
+    - {host: status.perfumeo-ai.com, status: 200, result: html-shell}
+    - {host: blog.perfumeo-ai.com, status: 200, result: html-shell}
+    - {host: shop.perfumeo-ai.com, status: 200, result: html-shell}
+  registries:
+    note: No first-party packages, repositories or mobile apps found.
+    results:
+    - {registry: npm, query: perfumeo, status: 404, hits: 0}
+    - {registry: pypi, query: perfumeo, status: 404, hits: 0}
+    - {registry: github-org, url: 'https://github.com/perfumeo', status: 404}
+    - {registry: apple-app-store, query: perfumeo, hits: 0, note: 'Ten results returned, none published by Perfumeo.'}
+  unreachable:
+  - url: http://web.archive.org/web/20260309050531/https://perfumeo-ai.com/
+    status: <no response>
+    note: >-
+      Wayback snapshot of the pre-parking site timed out after 25s on a single bounded
+      attempt and was not retried. The CDX index did confirm the real site existed
+      (200s for /, /news, /legal/privacy-policy, /legal/terms-of-service between
+      2023-12 and 2024-10), but its content was not read.

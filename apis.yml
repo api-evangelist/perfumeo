@@ -1,17 +1,37 @@
 aid: perfumeo
 name: Perfumeo
-description: 'Perfumeo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Perfumeo (Perfumeo(R)) is a consumer-hardware startup that built an AI-driven smart-home
+  fragrance diffuser — a connected device holding scent capsules that its companion mobile
+  app uses to adapt diffusion to the user's mood. The company describes itself as combining
+  AI, data science, "green mechatronics" and green chemistry, and states it was founded in
+  Paris in July 2021 and relocated to Cupertino, California in April 2023. It is an
+  end-user product company: no public API, SDK, developer portal, webhook surface or
+  machine-readable contract has ever been published, and none was found in this pass. As of
+  2026-08-26 the domain the company itself lists as its website, www.perfumeo-ai.com, no
+  longer belongs to it — WHOIS shows the domain was created 2026-06-12 under a Dynadot
+  privacy proxy on domain-parking nameservers, and it now serves a bot-challenge
+  interstitial followed by a "Coming Soon" holding page. The company's LinkedIn page
+  remains up and lists a headcount of one.
 url: https://raw.githubusercontent.com/api-evangelist/perfumeo/refs/heads/main/apis.yml
+image: null
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
-x-tier-reason: harvest
+x-tier-reason: no-api-surface
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Consumer Hardware
+- Internet of Things
+- Smart Home
+- Artificial Intelligence
+- Fragrance
+- Consumer Products
+- Mobile Apps
+- No API Surface
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,62 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
-- type: Website
-  url: https://www.nasdaqprivatemarket.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/perfumeo
+x-notes:
+  website: >-
+    NO Website pointer is emitted, deliberately. The company's own published website
+    (www.perfumeo-ai.com, per its LinkedIn profile and its own press releases) is no longer
+    under its control: the domain was re-registered 2026-06-12 through Dynadot behind a
+    privacy proxy on *.ns.giantpanda.com parking nameservers and now serves a placeholder.
+    Pointing this profile at it would send readers and agents to a parked third-party
+    domain and would assert a live company website that does not exist. The previous stub
+    carried "type: Website / https://www.nasdaqprivatemarket.com/", which was the HARVEST
+    SOURCE (Nasdaq Private Market's own site), never Perfumeo's — that pointer has been
+    removed as flatly incorrect.
+  domain_security: >-
+    security/perfumeo-domain-security.yml was written by probe-domain-security.py on
+    2026-08-26 and then DELETED in the same pass. Because the only Website pointer in the
+    stub was nasdaqprivatemarket.com, the script measured Nasdaq Private Market's TLS,
+    HSTS, SPF and DMARC posture and filed it as Perfumeo's. It has been removed rather than
+    re-pointed: perfumeo-ai.com is now a parking service's infrastructure, so probing it
+    would credit a squatter's DNS and TLS configuration to this company. Perfumeo has no
+    domain of its own left to measure.
+  namesake: >-
+    perfumeo.fr is a DIFFERENT and unrelated company — FUZE TRADING SAS of Reims, France, a
+    Shopify perfume retailer whose homepage announces it is closing. It is not this
+    company's European storefront and must not be merged into this profile or used as a
+    source for it.
+  unverified_claims: >-
+    Funding aggregators report a $105M round at a $450M valuation (Oct 2025) and patents in
+    157 countries. These are NOT asserted here: they trace to self-serve press-release wire
+    copy and aggregator summaries, they were not corroborated by any primary source, and
+    they sit poorly beside a LinkedIn headcount of one and a lapsed corporate domain.
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    The domain Perfumeo itself publishes as its website, perfumeo-ai.com, was re-registered
+    on 2026-06-12 behind a Dynadot privacy proxy on domain-parking nameservers and now
+    answers a JS bot-challenge and then a "Coming Soon" holding page, with wildcard DNS and
+    an HTTP catch-all that returns an identical 200 HTML shell for every path and every
+    subdomain including invented ones.
+  evidence:
+  - url: https://perfumeo-ai.com/
+    status: 200
+  - url: https://perfumeo-ai.com/openapi.json
+    status: 200
+  - url: https://perfumeo-ai.com/.well-known/agent-card.json
+    status: 200
+  - url: https://github.com/perfumeo
+    status: 404
+  - url: https://registry.npmjs.org/perfumeo
+    status: 404
+  - url: https://www.linkedin.com/company/perfumeo
+    status: 200
+  checked: '2026-08-26'
