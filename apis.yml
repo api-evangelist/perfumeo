@@ -60,6 +60,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Website
+  url: https://perfumeo-ai.com/
 - type: LinkedIn
   url: https://www.linkedin.com/company/perfumeo
 x-notes:
