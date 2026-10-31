@@ -64,5 +64,69 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Perfumeo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Perfumeo (Perfumeo(R)) is a consumer-hardware startup that built an AI-driven smart-home fragrance diffuser — a connected device holding scent capsules that its companion mobile app uses to adapt diffusion to the user's mood. The company describes itself as combining AI, data science, "green mechatronics" and green chemistry, and states it was founded in Paris in July 2021 and relocated to Cupertino, California in April 2023. It is an end-user product company: no public API, SDK, developer portal, webhook surface or machine-readable contract has ever been published, and none was found in this pass. As of 2026-08-26 the domain the company itself lists as its website, www.perfumeo-ai.com, no longer belongs to it — WHOIS shows the domain was created 2026-06-12 under a Dynadot privacy proxy on domain-parking nameservers, and it now serves a bot-challenge interstitial followed by a "Coming Soon" holding page. The company's LinkedIn page remains up and lists a headcount of one.
+
+**Areas:** Company · Consumer Hardware · IoT · Smart Home · Artificial Intelligence · Fragrance · Consumer Products · Mobile App
+
+## Perfumeo on APIs.io
+
+Everything profiled for Perfumeo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/perfumeo/](https://apis.io/providers/perfumeo/)** — or go straight to one of the APIs or properties below.
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://perfumeo-ai.com/)
+
+## API Evangelist rating
+
+**Kin Score 2.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 44.6 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 0.0** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/perfumeo/](https://apis.io/providers/perfumeo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Perfumeo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/perfumeo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
